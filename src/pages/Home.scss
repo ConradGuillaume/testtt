@@ -1,0 +1,83 @@
+.main {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  .top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 47vh;
+    .logo {
+      width: 350px;
+    }
+  }
+  article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #03030373;
+    .crackH,
+    .crackB {
+      background: $color-4;
+    }
+
+    .Beginner {
+      margin-top: 20px;
+      background: $color-2;
+      color: $color-1;
+      padding: 20px 35px;
+      border: none;
+      box-shadow: inset 0px 0px 5px 1px rgb(0, 0, 0);
+      font-family: $font-4;
+      font-size: 16px;
+    }
+    .containtitle {
+      margin-top: 50px;
+      margin-bottom: 40px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        margin: 0;
+        padding: 5px 0px;
+        font-family: $font-4;
+        color: $color-2;
+        -webkit-text-stroke: 0.2px $color-4;
+        font-weight: 900;
+        width: 100%;
+        font-size: 32px;
+        text-shadow: 2px 0px 0px $color-2;
+        text-align: center;
+        // background: $color-4;
+        z-index: 2;
+      }
+      .crack {
+        position: absolute;
+        transform: translateY(10px);
+        filter: drop-shadow(1.5px 0px 1px $color-3);
+      }
+    }
+  }
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+
+    button {
+      color: black;
+      padding: 10px 0px;
+      width: 70%;
+      font-family: $font-4;
+      font-size: 25px;
+      border: 2px solid $color-4;
+      background: $color-2;
+      -webkit-text-stroke: 1px $color-4;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 400px;
+  width: 100%;
+
+  @media (min-width: 800px) {
+    display: none;
+    z-index: 55;
+  }
+  .burger {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 4%;
+    right: 6%;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+
+    z-index: 50;
+    .stick-1,
+    .stick-2,
+    .stick-3 {
+      width: 35px;
+      height: 4px;
+      background: $color-3;
+      border-radius: 10px;
+    }
+  }
+
+  .burger-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: url(../style/images/background/soulever.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: -2px 0px 1px $color-2;
+    .filter {
+      position: absolute;
+      background: #030303d8;
+      height: 100vh;
+      width: 100%;
+      z-index: -1;
+    }
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+    //  height: 100px;
+    }
+    li {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      justify-content: center;
+      height: 7%;
+      margin: 20px 0px;
+      border-bottom: 2px groove $color-3;
+      width: 35%;
+      transition: ease 0.5s;
+      cursor: pointer;
+      a {
+        font-family: $font-4;
+        font-size: 20px;
+        font-weight: 900;
+        color: $color-1;
+        text-shadow: 2px 0px 0px $color-2;
+        text-decoration: none;
+      }
+      &:hover {
+        transform: scale(0.98);
+      }
+    }
+  }
+}

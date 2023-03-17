@@ -27,7 +27,10 @@ $font-2: "font-2", serif;
 $font-3: "font-3", serif;
 body {
   margin: 0;
-  background: #030303;
+  background: url(../style/images/background/old3.jpg) ;
+  background-attachment: fixed;
+  background-size: cover;
+
 }
 * {
   font-family: $font-1;

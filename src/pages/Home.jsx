@@ -1,8 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
 import logo from "../style/images/Logo/logo.png";
-import crackH from "../style/images/Logo/crackH.png";
-import crackB from "../style/images/Logo/crackB.png";
 import crack from "../style/images/background/crack.png";
 
 const Home = () => {

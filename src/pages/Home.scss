@@ -3,6 +3,7 @@
   overflow-x: hidden;
   width: 100%;
   min-height: 100vh;
+  background: rgba(0, 0, 0, 0.747);
   .top {
     position: relative;
     display: flex;
@@ -18,7 +19,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #03030373;
     .crackH,
     .crackB {
       background: $color-4;
@@ -26,11 +26,10 @@
 
     .Beginner {
       margin-top: 20px;
-      background: $color-2;
+      background: transparent;
       color: $color-1;
       padding: 20px 35px;
       border: none;
-      box-shadow: inset 0px 0px 5px 1px rgb(0, 0, 0);
       font-family: $font-4;
       font-size: 16px;
     }
@@ -76,7 +75,7 @@
       font-family: $font-4;
       font-size: 25px;
       border: 2px solid $color-4;
-      background: $color-2;
+      background: transparent;
       -webkit-text-stroke: 1px $color-4;
     }
   }

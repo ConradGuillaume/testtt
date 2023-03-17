@@ -7,18 +7,23 @@ import tiktok from "../style/images/Logo/tiktok.png";
 const Header = () => {
   return (
     <div className="header_container">
-
-      <div className="social">
-        <div className="imgcontain">
-          <img src={fb} alt="Facebook" />
-        </div>
-        <div className="imgcontain">
-          <img src={insta} alt="Instagram" />
-        </div>
-        <div className="imgcontain">
-          <img src={tiktok} alt="Tiktok" />
-        </div>
-      </div>
+      <ul className="social">
+        <li className="imgcontain">
+          <a href="https://www.facebook.com/paulinebcoaching/?locale=fr_FR">
+            <img src={fb} alt="Facebook" />
+          </a>
+        </li>
+        <li className="imgcontain">
+          <a href="https://www.instagram.com/crossfit_pbc/">
+            <img src={insta} alt="Instagram" />
+          </a>
+        </li>
+        <li className="imgcontain">
+          <a href="https://www.tiktok.com/@crossfitpbc">
+            <img src={tiktok} alt="Tiktok" />
+          </a>
+        </li>
+      </ul>
       <MobileNav />
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import logo from "../style/images/Logo/logo.png";
-import crack from "../style/images/background/crack.png";
+import crack from "../style/images/background/test.png";
 
 const Home = () => {
   return (
@@ -15,12 +15,10 @@ const Home = () => {
           <img className="crack" src={crack} alt="" />
           <p>Sculptez votre corps</p>
         </div>
-
-        <button className="Beginner">Séance découverte </button>
-        <div className="btn-container">
-          <button> Ouverte à tous !</button>
-        </div>
       </article>
+      <div className="btn-container">
+        <button> Réservez votre séance !</button>
+      </div>
     </div>
   );
 };

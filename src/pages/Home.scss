@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "black";
+  src: url("../style/fonts/Lato-Black.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bold";
+  src: url("../style/fonts/Lato-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+$font-4: "font-4", serif;
+$font-3: "font-3", serif;
+
+
 .home-contain {
   background: rgba(0, 0, 0, 0.363);
   height: 100%;

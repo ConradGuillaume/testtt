@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import image1 from "../style/images/background/image1.jpg";
 import image2 from "../style/images/background/image2.jpg";
 import image3 from "../style/images/background/image3.jpg";
+import Presta from "../components/Presta";
 
 const Home = () => {
   const [index, setIndex] = useState(0);
@@ -84,6 +85,7 @@ const Home = () => {
             forme que jamais auparavant.
           </p>
         </div>
+        <Presta />
       </div>
     </>
   );

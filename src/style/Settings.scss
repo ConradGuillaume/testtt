@@ -1,8 +1,23 @@
 $color-1: #ffffff;
 $color-2: #030303;
 $color-3: #d62527;
-$color-4: #EEC52B;
-
+$color-4: #eec52b;
+$color-5: radial-gradient(
+    ellipse farthest-corner at right bottom,
+    #fedb37 0%,
+    #fdb931 8%,
+    #aa8536 30%,
+    #8a6e2f 40%,
+    transparent 80%
+  ),
+  radial-gradient(
+    ellipse farthest-corner at left top,
+    #ffffff 0%,
+    #ffffac 8%,
+    #d1b464 25%,
+    #eeb609 62.5%,
+    #eeb609 100%
+  );
 
 @font-face {
   font-family: "font-4";
@@ -27,10 +42,9 @@ $font-2: "font-2", serif;
 $font-3: "font-3", serif;
 body {
   margin: 0;
-  background: url(../style/images/background/old3.jpg) ;
+  background: url(../style/images/background/old3.jpg);
   background-attachment: fixed;
   background-size: cover;
-
 }
 * {
   font-family: $font-1;

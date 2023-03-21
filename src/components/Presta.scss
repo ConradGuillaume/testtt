@@ -1,8 +1,16 @@
+@font-face {
+  font-family: "black";
+  src: url("../style/fonts/Lato-Black.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .presta-container {
   .title {
     background: $color-5;
     font-size: 25px;
-    font-family: $font-4;
+    font-family: "black";
+    font-weight: 900;
     padding-left: 5px;
     clip-path: polygon(0 1%, 90% 0, 100% 100%, 0% 100%);
     width: 65%;

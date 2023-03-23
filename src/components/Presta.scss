@@ -22,7 +22,9 @@
     width: 65%;
   }
   .cards {
+    position: relative;
     width: 100%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,6 +94,75 @@
         font-family: "black";
         margin: 0;
       }
+      .icon {
+        position: absolute;
+        bottom: 0.7%;
+        right: 15%;
+        z-index: 2;
+        height: 30px;
+      }
+      .icon-display {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        height: 50%;
+        width: 90%;
+
+        border: 2px groove $color-4;
+        border-radius: 25px;
+        backdrop-filter: blur(5px);
+        z-index: 2;
+        .icon-display-title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+          padding: 0;
+          height: 20%;
+          color: $color-3;
+          font-size: 24px;
+          text-transform: uppercase;
+          font-family: "bold";
+          -webkit-text-stroke: 0.7px black;
+          width: 100%;
+          text-align: center;
+          border-bottom: 2px dotted $color-1;
+        }
+        .icon-display-info {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 80%;
+        }
+        .cancel-modal {
+          position: absolute;
+          height: 30px;
+          background: white;
+          border: 2px solid;
+          z-index: 3;
+          right: 1%;
+          top: 1%;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .inscription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-2;
+    width: 70%;
+    margin: 0% 15%;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 7px 0px #ffffff;
+    p {
+      color: $color-1;
+      width: 100%;
+      text-align: center;
+      font-family: "black";
     }
   }
 }

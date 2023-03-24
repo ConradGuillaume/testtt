@@ -104,10 +104,15 @@ $font-3: "font-3", serif;
       width: 100%;
       text-align: center;
       color: $color-4;
+      font-size: 8vw;
       text-transform: uppercase;
     }
     h2 {
-      color: $color-4;
+      color: $color-1;
+      text-shadow: 3px 0px 0px black;
+      filter: drop-shadow(0.5px 0px 0px white);
+      font-size: 7vw;
+      margin: 40px 0px;
     }
     .wordcontain {
       display: flex;
@@ -124,6 +129,7 @@ $font-3: "font-3", serif;
         color: $color-2;
         background: $color-5;
         font-family: "black";
+        font-size: 4.5vw;
         height: 40px;
         text-align: center;
         width: 140px;
@@ -165,9 +171,40 @@ $font-3: "font-3", serif;
       }
     }
     .info {
-      color: $color-4;
+      color: $color-1;
+      -webkit-text-stroke: 0.2px black;
+      backdrop-filter: blur(2px);
+      margin: 0;
+      padding: 20px 15px;
       font-family: "bold";
+      font-size: 5vw;
       text-align: center;
+    }
+  }
+  .test {
+    background: $color-5;
+    color: #000;
+    position: relative;
+    width: 60%;
+    margin: 30px 20%;
+    border: none;
+    padding: 1em;
+    font-size: 4vw;
+    font-family: $font-4;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 0px $color-4;
+    filter: drop-shadow(0.5px 0px 0px rgb(0, 0, 0));
+    transition: 0.2s;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 0.9px black;
+    box-shadow: #a0831b 0px 7px 2px, #000 0px 8px 5px;
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      top: 4px;
+      box-shadow: #a0831b 0px 3px 2px, #000 0px 3px 5px;
     }
   }
 }

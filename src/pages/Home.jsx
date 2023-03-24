@@ -85,6 +85,7 @@ const Home = () => {
             forme que jamais auparavant.
           </p>
         </div>
+        <button className="test">Essayer le Crossfit</button>
         <Presta />
       </div>
     </>

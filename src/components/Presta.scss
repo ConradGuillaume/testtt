@@ -12,6 +12,7 @@
 }
 
 .presta-container {
+  margin-top: 80px;
   .title {
     background: $color-5;
     font-size: 25px;
@@ -20,6 +21,8 @@
     padding-left: 5px;
     clip-path: polygon(0 1%, 90% 0, 100% 100%, 0% 100%);
     width: 65%;
+    height: 35px;
+    margin: 80px 0px;
   }
   .cards {
     position: relative;
@@ -57,8 +60,9 @@
         font-size: 5vw;
         font-family: "bold";
         color: white;
+        text-shadow: 3px 0px 0px black;
+        filter: drop-shadow(0.5px 0px 0px white);
         z-index: 2;
-        -webkit-text-stroke: 0.5px black;
       }
       .spe-contain {
         width: 100%;
@@ -71,12 +75,16 @@
       .card-title {
         letter-spacing: 2px;
         text-transform: uppercase;
+        text-shadow: 3px 0px 0px black;
+        filter: drop-shadow(0.5px 0px 0px white);
         font-size: 7vw;
         margin-bottom: 0;
       }
       .card-price {
         width: 40%;
         font-size: 6vw;
+        text-shadow: 3px 0px 0px black;
+        filter: drop-shadow(0.5px 0px 0px white);
         text-align: center;
       }
       .separator {
@@ -90,6 +98,7 @@
         border-radius: 50% 50% 0px 0px;
         background: $color-5;
         color: black;
+        text-shadow: none;
         box-shadow: 0px -2px 3px $color-2;
         font-family: "black";
         margin: 0;

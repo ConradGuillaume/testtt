@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
+
     position: relative;
 
     .name-contain {
@@ -39,7 +39,7 @@
       justify-content: center;
       align-items: center;
       .name {
-        transform: translate(88px, 10px);
+        transform: translate(88px, 25px);
         font-family: "black";
         font-size: 7vw;
         text-shadow: 1px 0px 0px $color-1;
@@ -48,8 +48,8 @@
       }
     }
     .top {
-      width: 140%;
-      rotate: -15deg;
+      width: 100%;
+      rotate: -20deg;
       filter: drop-shadow(1.4px 3px 0.4px rgb(117, 116, 116));
     }
     .coach-contain {
@@ -75,6 +75,35 @@
       transform: translateY(-160px);
       width: 100%;
       overflow: hidden;
+    }
+  }
+  .about {
+    margin: 0;
+    color: #ffffff;
+    -webkit-text-stroke: 0.2px black;
+    backdrop-filter: blur(2px);
+    text-align: center;
+    font-size: 4.5vw;
+    padding: 0px 20px;
+  }
+  .licence {
+    width: 98%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    li {
+      display: flex;
+      align-items: center;
+      color: $color-4;
+      font-family: "bold";
+      font-size: 4.5vw;
+
+      img {
+        height: 30px;
+        filter: drop-shadow(1px 1px 0.3px $color-2);
+      }
     }
   }
 }

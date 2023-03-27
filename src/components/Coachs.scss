@@ -30,6 +30,7 @@
     justify-content: center;
     overflow: hidden;
     position: relative;
+
     .name-contain {
       position: absolute;
       width: 100%;
@@ -59,10 +60,14 @@
       justify-content: flex-start;
       align-items: center;
 
-      .The-coach {
+      .The-coach,
+      .The-coach2 {
         width: 50%;
         clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 81%);
-        filter: drop-shadow(3px 0px 5px black);
+        filter: drop-shadow(3px 0px 4px black);
+      }
+      .The-coach2 {
+        padding-right: 10px;
       }
     }
 

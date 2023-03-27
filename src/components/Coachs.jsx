@@ -22,7 +22,7 @@ const Coachs = () => {
         </div>
         <img className="top" src={bottom} alt="" />
         <div className="coach-contain">
-          <img className="The-coach" src={coachp} alt="" />
+          <img className="The-coach2" src={coachp} alt="" />
         </div>
       </div>
     </div>

@@ -17,6 +17,7 @@ $font-3: "font-3", serif;
 .home-contain {
   background: rgba(0, 0, 0, 0.363);
   height: 100%;
+  overflow: hidden;
   .main {
     position: relative;
     overflow-x: hidden;

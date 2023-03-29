@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "black";
+  src: url("../style/fonts/Lato-Black.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bold";
+  src: url("../style/fonts/Lato-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --gold: #ffb338;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+}
+.Strong-container {
+  body {
+    margin: 0;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-areas: "overlap";
+    place-content: center;
+    text-transform: uppercase;
+    border-top: 2px groove $color-3;
+    padding: 10px 0px;
+    border-bottom: 2px groove $color-3;
+  }
+  .wrapper > div {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: $color-2;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: clamp(1em, 5.5vw, 15rem);
+    grid-area: overlap;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 4px transparent;
+  }
+  div.bg {
+    background-image: repeating-linear-gradient(
+      105deg,
+      var(--gold) 0%,
+      var(--dark-shadow) 5%,
+      var(--gold) 12%
+    );
+    color: transparent;
+    filter: drop-shadow(5px 15px 15px black);
+    transform: scaleY(1.05);
+    transform-origin: top;
+  }
+  div.fg {
+    background-image: repeating-linear-gradient(
+      5deg,
+      var(--gold) 0%,
+      var(--light-shadow) 23%,
+      var(--gold) 31%
+    );
+    color: #1e2127;
+    transform: scale(1);
+  }
+  .article-title {
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 3px 0px 0px black;
+    filter: drop-shadow(0.5px 0px 0px white);
+    font-size: 7vw;
+  }
+  .open-to-all {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(1px);
+  }
+  .contain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  .main-contain {
+    background: url(../style/icones/age.jpg);
+    background-position: top;
+    background-size: cover;
+    border-radius: 25px;
+    width: 90%;
+  }
+  .img,
+  .img-2 {
+    height: 30vh;
+    width: 130%;
+    background: url(../style/icones/age.jpg);
+    background-position: center/top;
+    background-size: cover;
+    border-radius: 25px;
+    rotate: 12deg;
+    clip-path: polygon(
+      77% 12%,
+      59% 7%,
+      33% 12%,
+      16% 6%,
+      0% 14%,
+      0% 95%,
+      9% 95%,
+      23% 91%,
+      37% 99%,
+      51% 93%,
+      72% 97%,
+      86% 89%,
+      100% 91%,
+      100% 7%
+    );
+  }
+  .img-2 {
+    rotate: -12deg;
+    background: url(../style/icones/hand.jpg);
+    background-position: right 35% bottom 85%;
+    background-size: 80%;
+  }
+  .article-main {
+    padding: 15px 30px;
+    z-index: 2;
+    height: 100%;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 25px;
+    font-size: 4vw;
+    width: 80%;
+  }
+}

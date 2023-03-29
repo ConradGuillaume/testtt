@@ -9,6 +9,7 @@ import image2 from "../style/images/background/image2.jpg";
 import image3 from "../style/images/background/image3.jpg";
 import Presta from "../components/Presta";
 import Coachs from "../components/Coachs";
+import StrongPoint from "../components/StrongPoint";
 
 const Home = () => {
   const [index, setIndex] = useState(0);
@@ -89,6 +90,7 @@ const Home = () => {
         <button className="test">Essayer le Crossfit</button>
         <Presta />
         <Coachs />
+        <StrongPoint />
       </div>
     </>
   );

@@ -36,6 +36,7 @@
     grid-template-areas: "overlap";
     place-content: center;
     margin-top: 50px;
+    width: 100%;
     text-transform: uppercase;
     padding: 10px 0px;
   }
@@ -45,12 +46,14 @@
     color: $color-2;
     font-family: "Poppins", sans-serif;
     font-weight: 900;
-    font-size: clamp(1em, 6vw, 15rem);
+    font-size: clamp(1em, 6.5vw, 15rem);
     grid-area: overlap;
     letter-spacing: 2.5px;
     -webkit-text-stroke: 4px transparent;
   }
   div.bg {
+    width: 100%;
+    padding: 0px 10px;
     background-image: repeating-linear-gradient(
       105deg,
       var(--gold) 0%,
@@ -63,6 +66,8 @@
     transform-origin: top;
   }
   div.fg {
+    width: 100%;
+    padding: 0px 10px;
     background-image: repeating-linear-gradient(
       5deg,
       var(--gold) 0%,
@@ -161,7 +166,6 @@
       background: url(../style/icones/hand.jpg);
       background-position: right 35% bottom 85%;
       background-size: 80%;
-      
     }
   }
   .article-main {

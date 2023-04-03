@@ -41,6 +41,24 @@ const StrongPoint = () => {
           </p>
         </div>
       </article>
+      <article className="coachs">
+        <div className="contain">
+          <div class="wrapper">
+            <div class="bg"> Coaching personalisé</div>
+            <div class="fg"> Coaching personalisé </div>
+          </div>
+          <div className="img-contain-3">
+            <div className="img-3"></div>
+          </div>
+          <p className=" article-main">
+            Des séances de coaching personnalisé adaptées à tous
+            les niveaux, que vous soyez débutant, confirmé ou senior. Nos
+            programmes sur mesure sont conçus pour vous guider dans votre
+            parcours, vous permettre d'améliorer vos compétences et maintenir
+            une bonne condition physique.
+          </p>
+        </div>
+      </article>
     </div>
   );
 };

@@ -10,6 +10,7 @@ import image3 from "../style/images/background/image3.jpg";
 import Presta from "../components/Presta";
 import Coachs from "../components/Coachs";
 import StrongPoint from "../components/StrongPoint";
+import Chat from "../components/Chat";
 
 const Home = () => {
   const [index, setIndex] = useState(0);

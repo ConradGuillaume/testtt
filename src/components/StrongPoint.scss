@@ -53,6 +53,7 @@
   }
   div.bg {
     width: 100%;
+    text-align: center;
     padding: 0px 10px;
     background-image: repeating-linear-gradient(
       105deg,
@@ -67,6 +68,7 @@
   }
   div.fg {
     width: 100%;
+    text-align: center;
     padding: 0px 10px;
     background-image: repeating-linear-gradient(
       5deg,
@@ -86,7 +88,8 @@
     filter: drop-shadow(0.5px 0px 0px white);
     font-size: 6vw;
   }
-  .open-to-all {
+  .open-to-all,
+  .coachs {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -108,7 +111,8 @@
     width: 90%;
   }
   .img-contain,
-  .img-contain-2 {
+  .img-contain-2,
+  .img-contain-3 {
     width: 130%;
     height: 31vh;
     margin: 40px 0px;
@@ -132,8 +136,10 @@
       100% 91%,
       100% 7%
     );
+
     .img,
-    .img-2 {
+    .img-2,
+    .img-3 {
       height: 30vh;
       width: 130%;
       background: url(../style/icones/age.jpg);
@@ -159,6 +165,14 @@
       );
     }
   }
+  .img-contain-3 {
+    .img-3 {
+      background: url(../style/images/Coach/coachs.jpg);
+      background-position: right 35% bottom 85%;
+      background-size: 80%;
+    }
+  }
+
   .img-contain-2 {
     rotate: -15deg;
     .img-2 {

@@ -110,7 +110,7 @@ const Avis = () => {
   };
   return (
     <div className="carouselContainer">
-      <p className="title">Ils nous font confiance</p>
+      <p className="titleReview">Ils nous font confiance</p>
       <AnimatePresence exitBeforeEnter>
         {displayReviews(slideDirection)}
       </AnimatePresence>

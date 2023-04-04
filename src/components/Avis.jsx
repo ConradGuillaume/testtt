@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSwipeable } from "react-swipeable";
 
 const slideVariants = {
   hidden: (direction) => ({
@@ -18,6 +19,18 @@ const slideVariants = {
 
 const Avis = () => {
   const [slideDirection, setSlideDirection] = useState(1);
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      goToNextReview();
+      setSlideDirection(1);
+    },
+    onSwipedRight: () => {
+      goToPreviousReview();
+      setSlideDirection(-1);
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: false,
+  });
   const fixedReviews = [
     {
       author_name: "Oriane Ordener",
@@ -109,7 +122,7 @@ const Avis = () => {
     );
   };
   return (
-    <div className="carouselContainer">
+    <div className="carouselContainer" {...handlers}>
       <p className="titleReview">Ils nous font confiance</p>
       <AnimatePresence exitBeforeEnter>
         {displayReviews(slideDirection)}

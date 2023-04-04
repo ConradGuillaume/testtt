@@ -83,12 +83,14 @@ const Avis = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
   const goToPreviousReview = () => {
+    setSlideDirection(-1);
     setCurrentReviewIndex((prevIndex) =>
       prevIndex === 0 ? fixedReviews.length - 1 : prevIndex - 1
     );
   };
 
   const goToNextReview = () => {
+    setSlideDirection(1);
     setCurrentReviewIndex((prevIndex) =>
       prevIndex === fixedReviews.length - 1 ? 0 : prevIndex + 1
     );

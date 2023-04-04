@@ -11,6 +11,7 @@ import Presta from "../components/Presta";
 import Coachs from "../components/Coachs";
 import StrongPoint from "../components/StrongPoint";
 import Chat from "../components/Chat";
+import Avis from "../components/Avis";
 
 const Home = () => {
   const [index, setIndex] = useState(0);
@@ -92,6 +93,7 @@ const Home = () => {
         <Presta />
         <Coachs />
         <StrongPoint />
+        <Avis />
       </div>
     </>
   );

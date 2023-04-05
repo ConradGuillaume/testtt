@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 
+// Define the slide transition variants for the carousel
 const slideVariants = {
   hidden: (direction) => ({
     x: direction > 0 ? "100%" : "-100%",
@@ -18,19 +19,20 @@ const slideVariants = {
 };
 
 const Avis = () => {
-  const [slideDirection, setSlideDirection] = useState(1);
+  // State to keep track of the current slide direction
+  const [slideDirection, setSlideDirection] = useState(0);
+  // Set up swipe handlers for left and right swipes
   const handlers = useSwipeable({
     onSwipedLeft: () => {
       goToNextReview();
-      setSlideDirection(1);
     },
     onSwipedRight: () => {
       goToPreviousReview();
-      setSlideDirection(-1);
     },
     preventDefaultTouchmoveEvent: true,
     trackMouse: false,
   });
+  // Array of fixed reviews to be displayed in the carousel
   const fixedReviews = [
     {
       author_name: "Oriane Ordener",
@@ -68,7 +70,7 @@ const Avis = () => {
       text: "PBC et Crossfit ne font qu'un Des installations modernes et propres, une qualité ainsi qu'un suivi des entraînements.Je recommande chaleureusement, cette salle pour les novices comme pour les experts.",
     },
   ];
-
+  // Function to display star rating based on the provided rating
   const displayStars = (rating) => {
     let stars = [];
     for (let i = 0; i < 5; i++) {
@@ -80,8 +82,9 @@ const Avis = () => {
     }
     return stars;
   };
+  // State to keep track of the current review index
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
-
+  // Function to go to the previous review in the carousel
   const goToPreviousReview = () => {
     setSlideDirection(-1);
     setCurrentReviewIndex((prevIndex) =>
@@ -89,61 +92,58 @@ const Avis = () => {
     );
   };
 
+  // Function to go to the next review in the carousel
+
   const goToNextReview = () => {
     setSlideDirection(1);
     setCurrentReviewIndex((prevIndex) =>
       prevIndex === fixedReviews.length - 1 ? 0 : prevIndex + 1
     );
   };
+  // Function to display the current review in the carousel
   const displayReviews = () => {
     const review = fixedReviews[currentReviewIndex];
 
     return (
-      <motion.div
-        key={currentReviewIndex}
-        className="reviewContainer"
-        custom={slideDirection}
-        variants={slideVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        transition={{ duration: 0.5 }}
-      >
-        <div className="filter"></div>
-        <div className="reviewHeader">
-          <p className="reviewAuthor">{review.author_name}</p>
-          <img
-            className="profilePhoto"
-            src={review.profile_photo_url}
-            alt={`${review.author_name}'s profile`}
-          />
-          <div className="reviewStars">{displayStars(review.rating)}</div>
-        </div>
-        <p className="reviewText">{review.text}</p>
-      </motion.div>
+      <AnimatePresence exitBeforeEnter>
+        <motion.div
+          key={`review-${currentReviewIndex}`}
+          className="reviewContainer"
+          custom={slideDirection}
+          variants={slideVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          transition={{ duration: 0.5 }}
+        >
+          <div className="filter"></div>
+          <div className="reviewHeader">
+            <p className="reviewAuthor">{review.author_name}</p>
+            <img
+              className="profilePhoto"
+              src={review.profile_photo_url}
+              alt={`${review.author_name}'s profile`}
+            />
+            <div className="reviewStars">{displayStars(review.rating)}</div>
+          </div>
+          <p className="reviewText">{review.text}</p>
+        </motion.div>
+      </AnimatePresence>
     );
   };
+  // Return the carousel with swipe handlers, displayed reviews, and navigation buttons
   return (
     <div className="carouselContainer" {...handlers}>
       <p className="titleReview">Ils nous font confiance</p>
-      <AnimatePresence exitBeforeEnter>
-        {displayReviews(slideDirection)}
-      </AnimatePresence>
-
+      {displayReviews()}
       <div className="navButtonsContainer">
         <button
           className="navButton prevButton"
-          onClick={() => {
-            goToPreviousReview();
-            setSlideDirection(-1);
-          }}
+          onClick={goToPreviousReview}
         ></button>
         <button
           className="navButton nextButton"
-          onClick={() => {
-            goToNextReview();
-            setSlideDirection(1);
-          }}
+          onClick={goToNextReview}
         ></button>
       </div>
     </div>

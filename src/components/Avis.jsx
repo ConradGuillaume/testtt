@@ -116,7 +116,6 @@ const Avis = () => {
           exit="exit"
           transition={{ duration: 0.5 }}
         >
-          <div className="filter"></div>
           <div className="reviewHeader">
             <p className="reviewAuthor">{review.author_name}</p>
             <img
@@ -146,6 +145,21 @@ const Avis = () => {
           onClick={goToNextReview}
         ></button>
       </div>
+      <span className="googleLink">
+        Retrouvez-nous sur{" "}
+        <a
+          href="https://www.google.com/maps/place/CROSSFIT+PBC/@49.061541,7.037006,15z/data=!4m6!3m5!1s0x479449e436100e7d:0x470c3812c200c9ff!8m2!3d49.061541!4d7.037006!16s%2Fg%2F11q3s0vl1z"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="blueLetter">G</span>
+          <span className="redLetter">o</span>
+          <span className="yellowLetter">o</span>
+          <span className="blueLetter">g</span>
+          <span className="greenLetter">l</span>
+          <span className="redLetter">e</span>
+        </a>
+      </span>
     </div>
   );
 };

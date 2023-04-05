@@ -133,7 +133,9 @@ const Avis = () => {
   // Return the carousel with swipe handlers, displayed reviews, and navigation buttons
   return (
     <div className="carouselContainer" {...handlers}>
-      <p className="titleReview">Ils nous font confiance</p>
+      <div className="titleContain">
+        <p className="titleReview">Ils nous font confiance</p>
+      </div>
       {displayReviews()}
       <div className="navButtonsContainer">
         <button

@@ -1,0 +1,31 @@
+.social-container {
+  margin-top: 100px;
+  .title-contain {
+    .title {
+      background: radial-gradient(
+          ellipse farthest-corner at right bottom,
+          #fedb37 0%,
+          #fdb931 8%,
+          #aa8536 30%,
+          #8a6e2f 40%,
+          transparent 80%
+        ),
+        radial-gradient(
+          ellipse farthest-corner at left top,
+          #ffffff 0%,
+          #ffffac 8%,
+          #d1b464 25%,
+          #eeb609 62.5%,
+          #eeb609 100%
+        );
+      font-size: 25px;
+      font-family: "black";
+      font-weight: 900;
+      padding-left: 5px;
+      clip-path: polygon(0 1%, 90% 0, 100% 100%, 0% 100%);
+      width: 70%;
+      height: 35px;
+      margin: 60px 0px;
+    }
+  }
+}

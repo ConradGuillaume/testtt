@@ -12,6 +12,8 @@ import Coachs from "../components/Coachs";
 import StrongPoint from "../components/StrongPoint";
 import Chat from "../components/Chat";
 import Avis from "../components/Avis";
+import Contact from "../components/Contact";
+import Social from "../components/Social";
 
 const Home = () => {
   const [index, setIndex] = useState(0);
@@ -94,6 +96,8 @@ const Home = () => {
         <Coachs />
         <StrongPoint />
         <Avis />
+        <Contact />
+        <Social />
       </div>
     </>
   );

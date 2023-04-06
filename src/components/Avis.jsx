@@ -20,7 +20,7 @@ const slideVariants = {
 
 const Avis = () => {
   // State to keep track of the current slide direction
-  const [slideDirection, setSlideDirection] = useState(0);
+  const [slideDirection, setSlideDirection] = useState(1);
   // Set up swipe handlers for left and right swipes
   const handlers = useSwipeable({
     onSwipedLeft: () => {
@@ -34,13 +34,6 @@ const Avis = () => {
   });
   // Array of fixed reviews to be displayed in the carousel
   const fixedReviews = [
-    {
-      author_name: "Oriane Ordener",
-      profile_photo_url:
-        "https://lh3.googleusercontent.com/a-/ACB-R5SM9EAibNokeGQI-jq5zelMbg4N7e4jxuZVHOi0kw=w60-h60-p-rp-mo-br100",
-      rating: 5,
-      text: "Une box de Crossfit comme on les aime ! J'ai eu l'occasion de découvrir les nouveaux locaux lors de mon drop in chez PBC, qui sont très beaux et spacieux ! Je suivais déjà les cours de Pauline avant l'ouverture de la box, c'est une superbe coach, à notre écoute et qui nous aide à progresser💪 Les cours sont adaptés à tous les niveaux je ne peux que vous recommander d'aller y faire votre première séance !!",
-    },
     {
       author_name: "Camille Fersing",
       profile_photo_url:
@@ -68,6 +61,13 @@ const Avis = () => {
         "https://lh3.googleusercontent.com/a-/ACB-R5St0TPFqaP1Bu_XgIfOr28c9D5mLVA_YlTk13tU=w60-h60-p-rp-mo-br100",
       rating: 4,
       text: "PBC et Crossfit ne font qu'un Des installations modernes et propres, une qualité ainsi qu'un suivi des entraînements.Je recommande chaleureusement, cette salle pour les novices comme pour les experts.",
+    },
+    {
+      author_name: "Oriane Ordener",
+      profile_photo_url:
+        "https://lh3.googleusercontent.com/a-/ACB-R5SM9EAibNokeGQI-jq5zelMbg4N7e4jxuZVHOi0kw=w60-h60-p-rp-mo-br100",
+      rating: 5,
+      text: "Une box de Crossfit comme on les aime ! J'ai eu l'occasion de découvrir les nouveaux locaux lors de mon drop in chez PBC, qui sont très beaux et spacieux ! Je suivais déjà les cours de Pauline avant l'ouverture de la box, c'est une superbe coach, à notre écoute et qui nous aide à progresser💪 Les cours sont adaptés à tous les niveaux je ne peux que vous recommander d'aller y faire votre première séance !!",
     },
   ];
   // Function to display star rating based on the provided rating

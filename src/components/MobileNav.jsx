@@ -10,6 +10,7 @@ const MobileNav = () => {
   const animStick3 = useAnimation();
 
   const handleBurgerClick = () => {
+    console.log("Burger clicked, current state:", burger);
     animStick1.start({
       rotate: burger ? 0 : 45,
       scale: burger ? 1 : 1.3,

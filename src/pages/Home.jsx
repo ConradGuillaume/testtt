@@ -14,6 +14,7 @@ import Chat from "../components/Chat";
 import Avis from "../components/Avis";
 import Contact from "../components/Contact";
 import Social from "../components/Social";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [index, setIndex] = useState(0);
@@ -98,6 +99,7 @@ const Home = () => {
         <Avis />
         <Contact />
         <Social />
+        <Footer />
       </div>
     </>
   );

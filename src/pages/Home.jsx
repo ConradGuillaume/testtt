@@ -4,10 +4,17 @@ import Header from "../components/Header";
 import logo from "../style/images/Logo/logo.png";
 import crack from "../style/images/background/test.png";
 import { motion } from "framer-motion";
-import image1 from "../style/images/background/image1.jpg";
-import image2 from "../style/images/background/image2.jpg";
-import image3 from "../style/images/background/image3.jpg";
 import Presta from "../components/Presta";
+import image1 from "../style/images/background/pbc.webp";
+import image2 from "../style/images/background/pbc2.webp";
+import image3 from "../style/images/background/pbc3.webp";
+import image4 from "../style/images/background/eddie.webp";
+import image5 from "../style/images/background/eddie2.webp";
+import image6 from "../style/images/background/pauline.webp";
+import image7 from "../style/images/background/run.webp";
+import image8 from "../style/images/background/soulever1.webp";
+import image9 from "../style/images/background/soulever2.webp";
+import image10 from "../style/images/background/tirer.webp";
 import Coachs from "../components/Coachs";
 import StrongPoint from "../components/StrongPoint";
 import Chat from "../components/Chat";
@@ -22,6 +29,13 @@ const Home = () => {
     { src: image1, alt: "Image 1" },
     { src: image2, alt: "Image 2" },
     { src: image3, alt: "Image 3" },
+    { src: image4, alt: "Image 4" },
+    { src: image5, alt: "Image 5" },
+    { src: image6, alt: "Image 6" },
+    { src: image7, alt: "Image 7" },
+    { src: image8, alt: "Image 8" },
+    { src: image9, alt: "Image 9" },
+    { src: image10, alt: "Image 10" },
   ];
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -87,9 +101,11 @@ const Home = () => {
             ))}
           </div>
           <p className="info">
-            Le CrossFit est un entraînement complet et intense qui te pousse
-            au-delà de tes limites pour te faire sentir plus fort et plus en
-            forme que jamais auparavant.
+            Qu'est-ce que le Crossfit ? <br />
+            Le Crossfit est un programme d'entraînement qui regroupe
+            l'Haltérophilie, la gymnastique et l'aérobie. <br />
+            Les entraînement sont basés sur la réalisation de mouvements
+            fonctionnels constamment variés,exécutés à haute intensité
           </p>
         </div>
         <button className="test">Essayer le Crossfit</button>

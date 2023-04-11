@@ -33,11 +33,10 @@ const StrongPoint = () => {
           </div>
 
           <p className=" article-main">
-            Le CrossFit est une communauté d'entraide et d'amitié. Les
-            participants se soutiennent mutuellement et encouragent les autres à
-            donner le meilleur d'eux-mêmes. Les entraînements effectués en
-            groupe, ce qui crée un sentiment de camaraderie et de motivation
-            supplémentaire.
+            Le sens de la communauté est un facteur essentiel du succès pour le
+            crossfit. Ce sont des personnes qui ne se conaissent pas mais qui
+            s'unissent dans l'effort,se soutiennent et s'encouragent. C'est ça
+            la communauté Crossfit
           </p>
         </div>
       </article>
@@ -51,11 +50,11 @@ const StrongPoint = () => {
             <div className="img-3"></div>
           </div>
           <p className=" article-main">
-            Des séances de coaching personnalisé adaptées à tous
-            les niveaux, que vous soyez débutant, confirmé ou senior. Nos
-            programmes sur mesure sont conçus pour vous guider dans votre
-            parcours, vous permettre d'améliorer vos compétences et maintenir
-            une bonne condition physique.
+            Vous avez un objectif précis ? <br />
+            Perte de poids,prise de masse,préparation concours,travail de
+            faiblesse... Le coaching personalisé est fait pour vous ! Nos coachs
+            vous accompagne dans cet objectif défini par vous-même en coaching
+            one-to-one infos et horraires des coachings à définir avec le coach
           </p>
         </div>
       </article>

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../style/images/Logo/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,22 +20,28 @@ const Footer = () => {
         <p className="partner">Partenaires</p>
         <ul>
           <li>
-            <a href="">Nom de partenaria</a>
+            <a href="https://www.fitandrack.com/">Fit&Rack</a>
           </li>
           <li>
-            <a href="">Nom de partenaria</a>
+            <a href="https://nocco.com/fr/">Nocco</a>
           </li>
           <li>
-            <a href="">Nom de partenaria</a>
+            <a href="https://www.lifeaidbevco.eu/fr/?gclid=CjwKCAjwrdmhBhBBEiwA4Hx5g0EeuFVdMJK3_FO4aFM4hZzvQEEB3FQXIRH3hV0JIK39M2ZCDYA6ZhoCK0oQAvD_BwE">
+              Fitaid
+            </a>
           </li>
           <li>
-            <a href="">Nom de partenaria</a>
+            <a href="https://healthy-life.fr/">Healthy-Life</a>
+          </li>
+          <li>
+            <a href="https://wodabox.com/">Wodabox</a>
           </li>
         </ul>
         <br />
-        <a className="legal" >
-          Mentions légales
-        </a>
+        <a className="legal">Mentions légales</a>
+        <Link to="/policy" className="policy">
+          Privacy-Policy
+        </Link>
       </div>
       <div className="footer__logo-copyright">
         <img className="footer__logo" src={logo} alt="Votre Logo" />{" "}

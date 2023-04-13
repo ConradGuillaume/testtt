@@ -56,11 +56,11 @@ const MobileNav = ({ homeRef, prestationRef, contactRef, equipeRef }) => {
         {burger && (
           <motion.nav
             initial={{ x: "150vw" }}
-            animate={{ x: 0, transition: { duration: 1, type: "spring" } }}
+            animate={{ x: 0, transition: { duration: 0.5, type: "tween" } }}
             exit={{
               x: "50vw",
               opacity: 0,
-              transition: { duration: 1, type: "spring" },
+              transition: { duration: 0.3, type: "tween" },
             }}
             className="burger-nav"
           >

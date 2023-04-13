@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import icones from "../style/icones/info.png";
 import { AnimatePresence, motion } from "framer-motion";
 import cancel from "../style/icones/cancel.png";
 
-const Presta = () => {
+const Presta = forwardRef((props, ref) => {
   const [info, setInfo] = useState(false);
   return (
-    <div className="presta-container">
+    <div className="presta-container" ref={ref}>
       <p className="title">Nos prestations </p>
       <div className="cards">
         <div className="card">
@@ -111,6 +111,6 @@ const Presta = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Presta;

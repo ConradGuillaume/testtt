@@ -1,8 +1,8 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
   const {
     register,
     handleSubmit,
@@ -26,7 +26,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="form-container-all">
+      <div className="form-container-all" ref={ref}>
         <div className="title-contain">
           <p className="title">Essayer le crossfit</p>
         </div>
@@ -103,6 +103,6 @@ const Contact = () => {
       </div>
     </>
   );
-};
+});
 
 export default Contact;

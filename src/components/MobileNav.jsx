@@ -1,13 +1,20 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import logo from "../style/images/Logo/logo.png";
 
-const MobileNav = () => {
+const MobileNav = ({ homeRef, prestationRef, contactRef, equipeRef }) => {
   const [burger, SetBurger] = useState(false);
   const animStick1 = useAnimation();
   const animStick2 = useAnimation();
   const animStick3 = useAnimation();
+
+  const scrollToRef = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error("Ref is null:", ref);
+    }
+  };
 
   const handleBurgerClick = () => {
     console.log("Burger clicked, current state:", burger);
@@ -48,17 +55,41 @@ const MobileNav = () => {
           >
             <div className="filter"></div>
             <img className="logo" src={logo} alt="logo" />
-            <li>
-              <NavLink to="/"> Accueil</NavLink>
+            <li
+              onClick={() => {
+                scrollToRef(homeRef);
+                console.log("Accueil clicked");
+              }}
+              className="nav-item"
+            >
+              Accueil
             </li>
-            <li>
-              <NavLink to="/prestation">Prestations</NavLink>
+            <li
+              onClick={() => {
+                scrollToRef(prestationRef);
+                console.log("Prestations clicked");
+              }}
+              className="nav-item"
+            >
+              Prestations
             </li>
-            <li>
-              <NavLink to="/contact">Contact</NavLink>
+            <li
+              onClick={() => {
+                scrollToRef(contactRef);
+                console.log("Contact clicked");
+              }}
+              className="nav-item"
+            >
+              Contact
             </li>
-            <li>
-              <NavLink to="/equipe">L'équipe</NavLink>
+            <li
+              onClick={() => {
+                scrollToRef(equipeRef);
+                console.log("L'équipe clicked");
+              }}
+              className="nav-item"
+            >
+              L'équipe
             </li>
           </motion.nav>
         )}

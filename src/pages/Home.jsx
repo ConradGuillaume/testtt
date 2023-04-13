@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import logo from "../style/images/Logo/logo.png";
@@ -19,12 +19,21 @@ import Coachs from "../components/Coachs";
 import StrongPoint from "../components/StrongPoint";
 import Chat from "../components/Chat";
 import Avis from "../components/Avis";
+
 import Contact from "../components/Contact";
 import Social from "../components/Social";
 import Footer from "../components/Footer";
 
 const Home = () => {
   const [index, setIndex] = useState(0);
+  const homeRef = useRef(null);
+  const prestationRef = useRef(null);
+  const contactRef = useRef(null);
+  const equipeRef = useRef(null);
+  const handleButtonClick = () => {
+    contactRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   const images = [
     { src: image1, alt: "Image 1" },
     { src: image2, alt: "Image 2" },
@@ -47,7 +56,13 @@ const Home = () => {
     <>
       <div className="home-contain">
         <div className="main">
-          <Header />
+          <Header
+            ref={homeRef}
+            homeRef={homeRef}
+            prestationRef={prestationRef}
+            contactRef={contactRef}
+            equipeRef={equipeRef}
+          />
           <div className="top">
             <img src={logo} alt="" className="logo" />
           </div>
@@ -108,12 +123,14 @@ const Home = () => {
             fonctionnels constamment variés,exécutés à haute intensité
           </p>
         </div>
-        <button className="test">Essayer le Crossfit</button>
-        <Presta />
-        <Coachs />
+        <button className="test" onClick={handleButtonClick}>
+          Essayer le Crossfit
+        </button>
+        <Presta ref={prestationRef} />
+        <Coachs ref={equipeRef} />
         <StrongPoint />
         <Avis />
-        <Contact />
+        <Contact ref={contactRef} />
         <Social />
         <Footer />
       </div>

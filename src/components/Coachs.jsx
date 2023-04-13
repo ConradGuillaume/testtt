@@ -1,12 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import griffe from "../style/images/Coach/griffe.png";
 import coachp from "../style/images/Coach/coach.png";
 import coach1 from "../style/images/Coach/coach1.png";
 import altère from "../style/images/Logo/haltere.png";
 
-const Coachs = () => {
+const Coachs = forwardRef((props, ref) => {
   return (
-    <div className="Coach-container">
+    <div className="Coach-container" ref={ref}>
       <p className="Coach-title">Nos Coachs </p>
       <div className="coach">
         <div className="name-contain">
@@ -78,6 +78,6 @@ const Coachs = () => {
       </ul>
     </div>
   );
-};
+});
 
 export default Coachs;

@@ -1,12 +1,13 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import MobileNav from "../components/MobileNav";
 import fb from "../style/images/Logo/fb.png";
 import insta from "../style/images/Logo/insta.png";
 import tiktok from "../style/images/Logo/tiktok.png";
 
-const Header = () => {
+const Header = forwardRef((props, ref) => {
+  const { homeRef, prestationRef, contactRef, equipeRef } = props;
   return (
-    <div className="header_container">
+    <div className="header_container" ref={ref}>
       <ul className="social">
         <li className="imgcontain">
           <a href="https://www.facebook.com/paulinebcoaching/?locale=fr_FR">
@@ -24,9 +25,14 @@ const Header = () => {
           </a>
         </li>
       </ul>
-      <MobileNav />
+      <MobileNav
+        homeRef={homeRef}
+        prestationRef={prestationRef}
+        contactRef={contactRef}
+        equipeRef={equipeRef}
+      />
     </div>
   );
-};
+});
 
 export default Header;

@@ -18,6 +18,11 @@ const MobileNav = ({ homeRef, prestationRef, contactRef, equipeRef }) => {
 
   const handleBurgerClick = () => {
     console.log("Burger clicked, current state:", burger);
+    toggleBurgerAnimation();
+    SetBurger(!burger);
+  };
+
+  const toggleBurgerAnimation = () => {
     animStick1.start({
       rotate: burger ? 0 : 45,
       scale: burger ? 1 : 1.3,
@@ -31,7 +36,13 @@ const MobileNav = ({ homeRef, prestationRef, contactRef, equipeRef }) => {
       translateX: 0,
       translateY: burger ? 0 : -15,
     });
-    SetBurger(!burger);
+  };
+
+  const handleNavItemClick = (ref) => {
+    console.log("Nav item clicked");
+    scrollToRef(ref);
+    toggleBurgerAnimation();
+    SetBurger(false);
   };
 
   return (
@@ -56,37 +67,25 @@ const MobileNav = ({ homeRef, prestationRef, contactRef, equipeRef }) => {
             <div className="filter"></div>
             <img className="logo" src={logo} alt="logo" />
             <li
-              onClick={() => {
-                scrollToRef(homeRef);
-                console.log("Accueil clicked");
-              }}
+              onClick={() => handleNavItemClick(homeRef)}
               className="nav-item"
             >
               Accueil
             </li>
             <li
-              onClick={() => {
-                scrollToRef(prestationRef);
-                console.log("Prestations clicked");
-              }}
+              onClick={() => handleNavItemClick(prestationRef)}
               className="nav-item"
             >
               Prestations
             </li>
             <li
-              onClick={() => {
-                scrollToRef(contactRef);
-                console.log("Contact clicked");
-              }}
+              onClick={() => handleNavItemClick(contactRef)}
               className="nav-item"
             >
               Contact
             </li>
             <li
-              onClick={() => {
-                scrollToRef(equipeRef);
-                console.log("L'équipe clicked");
-              }}
+              onClick={() => handleNavItemClick(equipeRef)}
               className="nav-item"
             >
               L'équipe

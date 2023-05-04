@@ -10,15 +10,17 @@
   font-weight: normal;
   font-style: normal;
 }
-.separator1 {
-  position: relative;
-  transform: translateY(-88px);
-  margin-left: -2%;
-  height: 250px;
-  rotate: 4deg;
-  background: #be1d1d;
-  width: 140%;
-  z-index: 0;
+@media (min-width: 1000px) {
+  .separator1 {
+    position: relative;
+    transform: translateY(-88px);
+    margin-left: -2%;
+    height: 250px;
+    rotate: 4deg;
+    background: #be1d1d;
+    width: 140%;
+    z-index: 0;
+  }
 }
 .presta-container {
   position: relative;

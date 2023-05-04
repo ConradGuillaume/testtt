@@ -242,13 +242,14 @@
     justify-content: center;
     background: $color-2;
     width: 70%;
-    margin: 0% 60%;
+    margin: 0% 15%;
     border-radius: 15px;
     box-shadow: inset 0px 0px 7px 0px #ffffff;
     @media (min-width: 1000px) {
       position: relative;
       z-index: 3;
       width: 30%;
+      margin: 0% 60%;
       margin-bottom: 120px;
     }
     p {

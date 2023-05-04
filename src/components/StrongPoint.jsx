@@ -11,7 +11,9 @@ const StrongPoint = () => {
             <div class="fg"> Ouvert à tous </div>
           </div>
           <div className="img-contain">
+            <div className="imgdesk"></div>
             <div className="img"></div>
+            <div className="imgdesk1"></div>
           </div>
           <p className=" article-main">
             Nous proposons des cours de Crossfit adaptés à tous les niveaux, que
@@ -29,7 +31,9 @@ const StrongPoint = () => {
             <div class="fg"> Communauté </div>
           </div>
           <div className="img-contain-2">
+            <div className="imgdesk3"></div>
             <div className="img-2"></div>
+            <div className="imgdesk4"></div>
           </div>
 
           <p className=" article-main">
@@ -47,7 +51,9 @@ const StrongPoint = () => {
             <div class="fg"> Coaching personalisé </div>
           </div>
           <div className="img-contain-3">
+            <div className="imgdesk5"></div>
             <div className="img-3"></div>
+            <div className="imgdesk6"></div>
           </div>
           <p className=" article-main">
             Vous avez un objectif précis ? <br />

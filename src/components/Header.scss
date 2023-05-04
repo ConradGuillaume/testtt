@@ -11,6 +11,12 @@
     align-items: center;
     margin-left: 3%;
     padding: 15px 0px;
+    @media (min-width: 1000px) {
+      margin-left: 2%;
+      margin-top: 125px;
+      align-items: flex-start;
+      flex-direction: column;
+    }
     .imgcontain {
       position: relative;
       display: flex;
@@ -20,6 +26,10 @@
       height: 42px;
       width: 42px;
       margin: 0px 10px;
+      @media (min-width: 1000px) {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
       a {
         display: flex;
         align-items: center;

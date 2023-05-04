@@ -18,11 +18,31 @@ $font-3: "font-3", serif;
   background: rgba(0, 0, 0, 0.363);
   height: 100%;
   overflow: hidden;
+  position: relative;
+
   .main {
     position: relative;
     overflow-x: hidden;
     width: 100%;
     min-height: 100vh;
+
+    @media (min-width: 1000px) {
+      background: url(../style/images/backgroundXL/hand.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      overflow-x: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+      }
+    }
 
     .top {
       position: relative;
@@ -30,7 +50,20 @@ $font-3: "font-3", serif;
       justify-content: center;
       align-items: center;
       height: 57vh;
+      @media (min-width: 1000px) {
+        position: absolute;
+        padding-left: 300px;
+        padding-bottom: 100px;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+        background: #030303fa;
+        z-index: 2;
+        top: -10%;
+        right: 0%;
+      }
       .logo {
+        @media (min-width: 1000px) {
+          transform: translate(30px, -10px);
+        }
         width: 350px;
       }
     }
@@ -42,6 +75,9 @@ $font-3: "font-3", serif;
       align-items: center;
       justify-content: center;
       height: 21vh;
+      @media (min-width: 1000px) {
+        align-items: flex-start;
+      }
 
       .containtitle {
         margin-top: 50px;
@@ -51,8 +87,34 @@ $font-3: "font-3", serif;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        p {
+        @media (min-width: 1000px) {
+          position: absolute;
+          bottom: 15%;
+          left: 0;
+        }
+        .titleXL {
+          margin-left: 2%;
+          font-family: $font-4;
+          color: $color-1;
+          font-weight: 900;
+          width: 100%;
+          font-size: 62px;
+          text-align: start;
+          text-shadow: 1px 0px 0px $color-2;
+          letter-spacing: 0.5px;
+          -webkit-text-stroke: 1.4px $color-2;
+          z-index: 2;
+          @media (max-width: 1000px) {
+            display: none;
+          }
+          span {
+            color: $color-4;
+            font-family: $font-4;
+            font-weight: 900;
+            -webkit-text-stroke: 1.4px $color-2;
+          }
+        }
+        .titleS {
           margin: 0;
           font-family: $font-4;
           color: $color-2;
@@ -63,14 +125,20 @@ $font-3: "font-3", serif;
           text-shadow: 1px 0px 0px $color-2;
           letter-spacing: 0.5px;
           -webkit-text-stroke: 0.3px $color-2;
-
           z-index: 2;
+          @media (min-width: 1000px) {
+            display: none;
+          }
         }
+
         .crack {
           height: 190px;
           width: 100%;
           position: absolute;
           filter: drop-shadow(1.5px -1px 0.6px rgb(153, 152, 152));
+          @media (min-width: 1000px) {
+            display: none;
+          }
         }
       }
     }
@@ -80,6 +148,12 @@ $font-3: "font-3", serif;
       align-items: center;
       height: 50px;
       width: 100%;
+      @media (min-width: 1000px) {
+        position: absolute;
+        bottom: 10%;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
 
       button {
         color: $color-4;
@@ -97,16 +171,58 @@ $font-3: "font-3", serif;
         text-shadow: 0.5px 0px 0px $color-4;
         filter: drop-shadow(1px 0px 10px black);
         cursor: pointer;
+        @media (min-width: 1000px) {
+          margin-right: 10%;
+          z-index: 2;
+          font-size: 35px;
+          align-items: flex-end;
+          justify-content: flex-end;
+        }
       }
     }
   }
   .pres {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @media (min-width: 1000px) {
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 92%);
+      position: relative;
+      z-index: 6;
+      padding-bottom: 150px;
+       background: #111110;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-200px);
+        background: url(../style/images/background/lionbg.webp);
+        background-repeat: no-repeat;
+        background-position: -20% 0%;
+        rotate: 10deg;
+        opacity: 1;
+        z-index: 0;
+        //clip-path: polygon(0 46%, 0% 100%, 100% 100%);
+      }
+    }
     h1 {
+      margin-top: 0;
+      padding-top: 2%;
       width: 100%;
       text-align: center;
       color: $color-4;
       font-size: 8vw;
       text-transform: uppercase;
+      @media (min-width: 1000px) {
+        position: relative;
+        color: $color-4;
+        font-size: 75px;
+        z-index: 5;
+      }
     }
     h2 {
       color: $color-1;
@@ -114,6 +230,22 @@ $font-3: "font-3", serif;
       filter: drop-shadow(0.5px 0px 0px white);
       font-size: 7vw;
       margin: 40px 0px;
+      @media (min-width: 1000px) {
+        font-size: 55px;
+        text-align: center;
+      }
+    }
+    .wordCarouselContain {
+      @media (min-width: 1000px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        width: 100%;
+      }
     }
     .wordcontain {
       display: flex;
@@ -122,6 +254,15 @@ $font-3: "font-3", serif;
       height: auto;
       width: 100%;
       overflow: hidden;
+      @media (min-width: 1000px) {
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 12%;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 650px;
+      }
       .keyword {
         display: flex;
         margin: 0;
@@ -134,14 +275,34 @@ $font-3: "font-3", serif;
         height: 40px;
         text-align: center;
         width: 140px;
+        @media (min-width: 1000px) {
+          clip-path: none;
+          text-align: start;
+          height: auto;
+          background: none;
+          border-radius: 15px;
+          color: transparent;
+          background: $color-2;
+          border: 2px groove $color-2;
+          padding: 0px 50px;
+          -webkit-text-stroke: 1px $color-2;
+          text-shadow: 0px 0px 2px $color-4;
+          font-size: 35px;
+        }
         clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
       }
       #last {
         clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+        @media (min-width: 1000px) {
+          clip-path: none;
+        }
       }
       #first {
         z-index: 5;
         clip-path: polygon(0% 0, 100% 0%, 90% 100%, 0% 100%);
+        @media (min-width: 1000px) {
+          clip-path: none;
+        }
       }
     }
 
@@ -150,6 +311,14 @@ $font-3: "font-3", serif;
       width: 100%;
       height: 400px;
       overflow: hidden;
+      @media (min-width: 1000px) {
+        width: 70%;
+        height: 650px;
+        border: 2px groove $color-3;
+        border-radius: 25px;
+        background: black;
+      }
+
       .slide {
         width: 100%;
         height: 100%;
@@ -171,6 +340,13 @@ $font-3: "font-3", serif;
         opacity: 1;
       }
     }
+    .infoButtonContain {
+      @media (min-width: 1000px) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
     .info {
       color: $color-1;
       -webkit-text-stroke: 0.2px black;
@@ -180,6 +356,11 @@ $font-3: "font-3", serif;
       font-family: "bold";
       font-size: 5vw;
       text-align: center;
+      @media (min-width: 1000px) {
+        width: 50%;
+        backdrop-filter: blur(0px);
+        font-size: 25px;
+      }
     }
   }
   .test {
@@ -200,6 +381,11 @@ $font-3: "font-3", serif;
     letter-spacing: 1px;
     -webkit-text-stroke: 0.9px black;
     box-shadow: #a0831b 0px 7px 2px, #000 0px 8px 5px;
+    @media (min-width: 1000px) {
+      width: 30%;
+      margin: 0;
+      font-size: 20px;
+    }
     &:hover {
       opacity: 1;
     }

@@ -23,6 +23,7 @@ import Avis from "../components/Avis";
 import Contact from "../components/Contact";
 import Social from "../components/Social";
 import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
 
 const Home = () => {
   const [index, setIndex] = useState(0);
@@ -63,13 +64,22 @@ const Home = () => {
             contactRef={contactRef}
             equipeRef={equipeRef}
           />
+          <NavBar
+            prestationRef={prestationRef}
+            contactRef={contactRef}
+            equipeRef={equipeRef}
+          />
           <div className="top">
             <img src={logo} alt="" className="logo" />
           </div>
           <article>
             <div className="containtitle">
               <img className="crack" src={crack} alt="" />
-              <p>Sculptez votre corps</p>
+              <p className="titleS">Sculptez votre corps</p>
+              <p className="titleXL">
+                Dépassez <span>vos limites</span>
+                <br /> atteignez vos objectifs
+              </p>
             </div>
             <div className="btn-container">
               <button> Réservez votre séance !</button>
@@ -81,51 +91,56 @@ const Home = () => {
           <h2>
             Salle de sport secteur <br /> Sarreguemines / Sarralbe
           </h2>
-          <div className="wordcontain">
-            <motion.p
-              className="keyword"
-              id="first"
-              initial={{ x: 16 }}
-              whileInView={{
-                transition: { delay: 1 },
-                x: 0,
-                zIndex: 2,
-              }}
-            >
-              Haltérophilie
-            </motion.p>
-            <motion.p className="keyword">Fitness</motion.p>
-            <motion.p
-              className="keyword"
-              id="last"
-              initial={{ x: -16 }}
-              whileInView={{
-                transition: { delay: 1 },
-                x: 0,
-                zIndex: 2,
-              }}
-            >
-              Endurance
-            </motion.p>
+          <div className="wordCarouselContain">
+            <div className="wordcontain">
+              <motion.p
+                className="keyword"
+                id="first"
+                initial={{ x: 16 }}
+                whileInView={{
+                  transition: { delay: 1 },
+                  x: 0,
+                  zIndex: 2,
+                }}
+              >
+                Haltérophilie
+              </motion.p>
+              <motion.p className="keyword">Fitness</motion.p>
+              <motion.p
+                className="keyword"
+                id="last"
+                initial={{ x: -16 }}
+                whileInView={{
+                  transition: { delay: 1 },
+                  x: 0,
+                  zIndex: 2,
+                }}
+              >
+                Endurance
+              </motion.p>
+            </div>
+            <div className="carousel">
+              {images.map((image, i) => (
+                <div key={i} className={`slide ${i === index ? "active" : ""}`}>
+                  <img src={image.src} alt={image.alt} />
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="carousel">
-            {images.map((image, i) => (
-              <div key={i} className={`slide ${i === index ? "active" : ""}`}>
-                <img src={image.src} alt={image.alt} />
-              </div>
-            ))}
+          <div className="infoButtonContain">
+            <p className="info">
+              Qu'est-ce que le Crossfit ? <br /> <br />
+              Le Crossfit est un programme d'entraînement qui regroupe
+              l'Haltérophilie, la gymnastique et l'aérobie. <br />
+              Les entraînement sont basés sur la réalisation de mouvements
+              fonctionnels constamment variés,exécutés à haute intensité
+            </p>
+
+            <button className="test" onClick={handleButtonClick}>
+              Essayer le Crossfit
+            </button>
           </div>
-          <p className="info">
-            Qu'est-ce que le Crossfit ? <br />
-            Le Crossfit est un programme d'entraînement qui regroupe
-            l'Haltérophilie, la gymnastique et l'aérobie. <br />
-            Les entraînement sont basés sur la réalisation de mouvements
-            fonctionnels constamment variés,exécutés à haute intensité
-          </p>
         </div>
-        <button className="test" onClick={handleButtonClick}>
-          Essayer le Crossfit
-        </button>
         <Presta ref={prestationRef} />
         <Coachs ref={equipeRef} />
         <StrongPoint />

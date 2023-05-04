@@ -6,11 +6,24 @@
   color: #ffffff;
   padding: 20px;
   padding-top: 0;
+  @media (min-width: 1000px) {
+    width: 100%;
+    background: black;
+    flex-direction: row;
+    align-items: center;
+  }
+  .partner-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+  }
   .partner {
     text-align: center;
     margin: 0;
     margin-top: 10px;
     width: 100%;
+    margin: 0;
     color: $color-3;
   }
   ul {
@@ -31,28 +44,72 @@
   .legal {
     color: $color-3;
     width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
     text-align: center;
   }
+
   .footer__contact {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-  }
+    align-items: center;
 
+    @media (min-width: 1000px) {
+      flex-direction: row;
+      align-items: flex-start;
+      margin-top: 2%;
+      width: 60%;
+      height: 100%;
+    }
+  }
+  .info-contain {
+    @media (min-width: 1000px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      height: 100%;
+    }
+  }
   .footer__contact-info {
     margin-bottom: 5px;
     text-align: center;
+    @media (min-width: 1000px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      text-align: start;
+      height: 100%;
+      width: 100%;
+      font-size: 19px;
+    }
   }
-
+  .legal-contain {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 1000px) {
+      width: 30%;
+    }
+  }
   .footer__logo-copyright {
     display: flex;
     align-items: center;
+    @media (min-width: 1000px) {
+      flex-direction: column;
+      width: 40%;
+      height: 100%;
+    }
   }
 
   .footer__logo {
     height: 80px;
     width: 80px;
     margin-right: 10px;
+    @media (min-width: 1000px) {
+      width: 180px;
+      height: 180px;
+    }
   }
   .policy {
     width: 100%;

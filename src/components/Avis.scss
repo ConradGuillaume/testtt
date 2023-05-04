@@ -14,6 +14,10 @@
   background-repeat: no-repeat;
   border: 2px groove $color-3;
   box-shadow: 0px 0px 8px inset #dadada;
+  @media (min-width: 1000px) {
+    width: 50%;
+    height: 700px;
+  }
 }
 .reviewContainer::-webkit-scrollbar {
   width: 0;
@@ -32,6 +36,10 @@
   font-weight: bold;
   color: $color-1;
   margin-bottom: 0.5rem;
+  @media (min-width: 1000px) {
+    font-size: 33px;
+    padding-bottom: 20px;
+  }
 }
 .profilePhoto {
   width: 50px;
@@ -39,11 +47,20 @@
   border-radius: 50%;
   object-fit: cover;
   margin-right: 0.5rem;
+  @media (min-width: 1000px) {
+    height: 85px;
+    width: 85px;
+    margin-bottom: 20px;
+    border: 2px groove $color-3;
+  }
 }
 
 .reviewStars {
   color: #f4b400;
   font-size: 21px;
+  @media (min-width: 1000px) {
+    font-size: 27px;
+  }
 }
 .titleContain {
   display: flex;
@@ -59,6 +76,14 @@
     width: 85%;
     height: 35px;
     margin: 60px 0px;
+    @media (min-width: 1000px) {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      font-size: 35px;
+      height: 65px;
+      width: 45%;
+    }
   }
 }
 
@@ -76,8 +101,13 @@
   padding: 15px 10px;
   text-shadow: 0px 0px 20px black;
   background: rgba(0, 0, 0, 0.712);
+  @media (min-width: 1000px) {
+    font-size: 27px;
+    padding: 0px 100px;
+  }
 }
 .carouselContainer {
+  position: relative;
   margin-top: 60px;
   display: flex;
   flex-direction: column;
@@ -91,6 +121,9 @@
   gap: 20px;
   width: 90%;
   margin-top: 1rem;
+  @media (min-width: 1000px) {
+    justify-content: space-evenly;
+  }
 }
 
 .navButton {
@@ -114,6 +147,10 @@
     40% 100%,
     0% 50%
   );
+  @media (min-width: 1000px) {
+    width: 8%;
+    height: 40px;
+  }
 }
 
 .nextButton {
@@ -130,6 +167,10 @@
     60% 80%,
     0% 80%
   );
+  @media (min-width: 1000px) {
+    width: 8%;
+    height: 40px;
+  }
 }
 .googleLink {
   width: 100%;
@@ -138,6 +179,9 @@
   padding-left: 10%;
   text-align: start;
   color: $color-1;
+  @media (min-width: 1000px) {
+    font-size: 30px;
+  }
 }
 .googleLink a {
   font-size: 5vw;
@@ -149,6 +193,10 @@
   font-weight: bold;
   text-align: center;
   transition: all 0.2s ease-in-out;
+  @media (min-width: 1000px) {
+    font-size: 30px;
+    margin-left: 0.5%;
+  }
 }
 
 .googleLink a:active {

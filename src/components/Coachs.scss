@@ -10,8 +10,40 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@media (min-width: 1000px) {
+  .intersec {
+    position: absolute;
+    width: 100%;
+    height: 05%;
+    background: #be1d1d;
+    z-index: 1;
+    top: 3100px;
+  }
+}
 .Coach-container {
+  position: relative;
+  z-index: 2;
+  @media (min-width: 1000px) {
+    padding-bottom: 80px;
+    background: url(../style/images/backgroundXL/soulever.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 150px;
+    border-top: 2px groove #9b1818;
+    clip-path: polygon(0 5.5%, 100% 0%, 100% 100%, 0 96%);
+    margin-top: -95px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.815);
+      z-index: 0;
+    }
+  }
   .Coach-title {
     background: $color-5;
     font-size: 25px;
@@ -22,35 +54,64 @@
     width: 65%;
     height: 35px;
     margin: 80px 0px;
+    @media (min-width: 1000px) {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      font-size: 35px;
+      height: 65px;
+      width: 45%;
+    }
   }
   .coach {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
     position: relative;
-
-    .name-contain {
-      position: absolute;
-      width: 100%;
-      height: 100%;
+    .name-contain,
+    .name-contain-p {
+      width: 90%;
+      height: 40vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      .name {
-        transform: translate(88px, 25px);
+      justify-content: flex-end;
+      align-items: flex-end;
+      border-radius: 25px;
+      border: 2px groove $color-3;
+      background: url(../style/images/background/eddie2.webp);
+      background-position: right 0% bottom 55%;
+      background-size: 180%;
+      margin-bottom: 20px;
+      @media (min-width: 1000px) {
+        height: 55vh;
+        width: 50%;
+      }
+
+      .name,
+      .name-p {
         font-family: "black";
         font-size: 7vw;
         backdrop-filter: blur(5px);
         color: $color-1;
         padding: 10px;
+        margin-right: 2%;
         border-radius: 20px;
         border: 2px groove $color-3;
         text-shadow: 3px 0px 0px $color-2;
         -webkit-text-stroke: 2px $color-2;
         box-shadow: 0px 0px 20px 13px black inset;
         z-index: 2;
+        @media (min-width: 1000px) {
+          font-size: 35px;
+        }
+      }
+    }
+    .name-contain-p {
+      background: url(../style/images/background/pauline.webp);
+      background-position: right 30% bottom 55%;
+      background-size: 180%;
+      .name-p {
       }
     }
     .top {
@@ -70,8 +131,8 @@
       .The-coach,
       .The-coach2 {
         width: 50%;
-        clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 81%);
-        filter: drop-shadow(3px 0px 4px black);
+        height: 100%;
+        object-fit: contain;
       }
       .The-coach2 {
         padding-right: 10px;
@@ -92,6 +153,13 @@
     text-align: center;
     font-size: 4.5vw;
     padding: 0px 20px;
+    @media (min-width: 1000px) {
+      padding-left: 0;
+      width: 50%;
+      margin: 0% 25%;
+      margin-top: 20px;
+      font-size: 30px;
+    }
   }
   .licence {
     width: 98%;
@@ -106,11 +174,34 @@
       color: $color-4;
       font-family: "bold";
       font-size: 4.5vw;
+      @media (min-width: 1000px) {
+        font-size: 25px;
+        z-index: 2;
+      }
 
       img {
         height: 30px;
         filter: drop-shadow(1px 1px 0.3px $color-2);
+        @media (min-width: 1000px) {
+          height: 40px;
+        }
       }
+    }
+  }
+}
+@media (min-width: 1000px) {
+  .separator2 {
+    position: relative;
+    z-index: 5;
+    margin-top: -152px;
+    width: 150%;
+    height: 150px;
+    rotate: 0;
+    background: $color-3;
+    rotate: 2.5deg;
+    z-index: 0;
+    @media (max-width: 1318px) {
+      rotate: 4deg;
     }
   }
 }

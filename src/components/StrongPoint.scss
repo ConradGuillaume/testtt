@@ -27,6 +27,14 @@
     width: 65%;
     height: 35px;
     margin: 60px 0px;
+    @media (min-width: 1000px) {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      font-size: 35px;
+      height: 65px;
+      width: 45%;
+    }
   }
   body {
     margin: 0;
@@ -50,6 +58,9 @@
     grid-area: overlap;
     letter-spacing: 2.5px;
     -webkit-text-stroke: 4px transparent;
+    @media (min-width: 1000px) {
+      font-size: 4vw;
+    }
   }
   div.bg {
     width: 100%;
@@ -87,6 +98,9 @@
     text-shadow: 3px 0px 0px black;
     filter: drop-shadow(0.5px 0px 0px white);
     font-size: 6vw;
+    @media (min-width: 1000px) {
+      font-size: 3vw;
+    }
   }
   .open-to-all,
   .coachs {
@@ -118,7 +132,10 @@
     margin: 40px 0px;
     display: flex;
     align-items: center;
-    background: $color-3;
+    @media (max-width: 1000px) {
+      background: $color-3;
+    }
+
     rotate: 15deg;
     clip-path: polygon(
       77% 12%,
@@ -136,50 +153,123 @@
       100% 91%,
       100% 7%
     );
+    .imgdesk,
+    .imgdesk1,
+    .imgdesk3,
+    .imgdesk4,
+    .imgdesk5,
+    .imgdesk6 {
+      display: none;
+    }
+    @media (min-width: 1000px) {
+      rotate: 8deg;
+      height: 50vh;
+      .imgdesk,
+      .imgdesk1,
+      .imgdesk3,
+      .imgdesk4,
+      .imgdesk5,
+      .imgdesk6 {
+        width: 50%;
+        height: 100%;
+        display: block;
+      }
+      .imgdesk1 {
+        background: url(../style/images/background/tirer.webp);
+        border-left: 8px groove black;
+        background-position: center;
+      }
+      .imgdesk {
+        background: url(../style/images/background/soulever1.webp);
+        background-size: 100%;
+        background-position: center;
+        border-right: 8px groove black;
+      }
+    }
 
     .img,
     .img-2,
     .img-3 {
       height: 30vh;
-      width: 130%;
+      @media (max-width: 1000px) {
+        width: 130%;
+      }
+      width: 50%;
       background: url(../style/icones/age.webp);
       background-position: center/top;
       background-size: cover;
       border-radius: 25px;
       rotate: -0deg;
-      clip-path: polygon(
-        77% 12%,
-        59% 7%,
-        33% 12%,
-        16% 6%,
-        0% 14%,
-        0% 95%,
-        9% 95%,
-        23% 91%,
-        37% 99%,
-        51% 93%,
-        72% 97%,
-        86% 89%,
-        100% 91%,
-        100% 7%
-      );
+      @media (max-width: 1000px) {
+        clip-path: polygon(
+          77% 12%,
+          59% 7%,
+          33% 12%,
+          16% 6%,
+          0% 14%,
+          0% 95%,
+          9% 95%,
+          23% 91%,
+          37% 99%,
+          51% 93%,
+          72% 97%,
+          86% 89%,
+          100% 91%,
+          100% 7%
+        );
+      }
+
+      @media (min-width: 1000px) {
+        background-size: cover;
+        height: 49vh;
+      }
     }
   }
   .img-contain-3 {
+    .imgdesk5 {
+      background: url(../style/images/background/eddie2.webp);
+      background-position: center;
+    }
+    .imgdesk6 {
+      background: url(../style/images/background/pauline.webp);
+      background-position: center;
+    }
     .img-3 {
       background: url(../style/images/background/coach.webp);
       background-position: right 35% bottom 85%;
       background-size: 80%;
+      @media (min-width: 1000px) {
+        background: url(../style/images/backgroundXL/coach.jpg);
+        background-size: cover;
+        background-position: center;
+      }
     }
   }
 
   .img-contain-2 {
     rotate: -15deg;
+    @media (min-width: 1000px) {
+      rotate: -8deg;
+    }
+    .imgdesk3 {
+      border-right: 8px groove black;
+      background: url(../style/images/background/hand.webp);
+    }
+    .imgdesk4 {
+      border-left: 8px groove black;
+      background: url(../style/images/backgroundXL/commu2.jpg);
+      background-size: cover;
+    }
     .img-2 {
       rotate: 0deg;
       background: url(../style/images/background/community.webp);
       background-size: 100%;
       background-position: 10%;
+      @media (min-width: 1000px) {
+        background: url(../style/images/backgroundXL/commu.jpg);
+        background-size: cover;
+        background-position: center;
+      }
     }
   }
   .article-main {
@@ -193,5 +283,12 @@
     line-height: 25px;
     font-size: 5vw;
     width: 90%;
+    @media (min-width: 1000px) {
+      margin-top: 40px;
+      width: 60%;
+      font-size: 30px;
+      letter-spacing: 2px;
+      line-height: 30px;
+    }
   }
 }

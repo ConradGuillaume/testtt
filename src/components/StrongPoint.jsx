@@ -9,9 +9,9 @@ const StrongPoint = () => {
         <div className="contain">
           <motion.div
             class="wrapper"
-            initial={{ y: "40vh" }}
+            initial={{ y: "40vh", opacity: 0 }}
             transition={{ duration: 0.5 }}
-            whileInView={{ y: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
           >
             <div class="bg"> Ouvert à tous</div>
             <div class="fg"> Ouvert à tous </div>
@@ -34,9 +34,9 @@ const StrongPoint = () => {
         <div className="contain">
           <motion.div
             class="wrapper"
-            initial={{ y: "40vh" }}
+            initial={{ y: "40vh", opacity: 0 }}
             transition={{ duration: 0.5 }}
-            whileInView={{ y: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
           >
             <div class="bg"> Communauté</div>
             <div class="fg"> Communauté </div>
@@ -59,9 +59,9 @@ const StrongPoint = () => {
         <div className="contain">
           <motion.div
             class="wrapper"
-            initial={{ y: "40vh" }}
+            initial={{ y: "40vh", opacity: 0 }}
             transition={{ duration: 0.5 }}
-            whileInView={{ y: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
           >
             <div class="bg"> Coaching personalisé</div>
             <div class="fg"> Coaching personalisé </div>

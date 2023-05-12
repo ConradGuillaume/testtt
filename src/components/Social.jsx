@@ -8,13 +8,25 @@ const Social = () => {
       </div>
       <ul>
         <li>
-          <a className="fb" href=""></a>
+          <a
+            className="fb"
+            href="https://www.facebook.com/paulinebcoaching"
+            target="_blank"
+          ></a>
         </li>
         <li>
-          <a className="insta" href=""></a>
+          <a
+            className="insta"
+            href="https://www.instagram.com/crossfit_pbc/"
+            target="_blank"
+          ></a>
         </li>
         <li>
-          <a className="tiktok" href=""></a>
+          <a
+            className="tiktok"
+            href="https://www.tiktok.com/@crossfitpbc"
+            target="_blank"
+          ></a>
         </li>
       </ul>
       <div className="cracked"></div>

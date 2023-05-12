@@ -12,7 +12,12 @@ const Presta = forwardRef((props, ref) => {
         <p className="title">Nos prestations </p>
         <div className="all-cards-contain">
           <div className="cards">
-            <div className="card">
+            <motion.div
+              className="card"
+              initial={{ y: "40vh" }}
+              transition={{ duration: 0.5 }}
+              whileInView={{ y: 0 }}
+            >
               <div className="filter"></div>
               <p className="card-title">Illimité</p>
               <p className="card-price">80 €</p>
@@ -58,11 +63,16 @@ const Presta = forwardRef((props, ref) => {
                   </motion.aside>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           </div>
 
           <div className="cards">
-            <div className="card">
+            <motion.div
+              className="card"
+              initial={{ y: "40vh" }}
+              transition={{ duration: 0.5 }}
+              whileInView={{ y: 0 }}
+            >
               <div className="filter"></div>
               <p className="card-title">2 Séances</p>
               <p className="card-price">60 €</p>
@@ -108,7 +118,7 @@ const Presta = forwardRef((props, ref) => {
                   </motion.aside>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="inscription">

@@ -8,13 +8,13 @@ const Footer = () => {
       <div className="footer__contact">
         <div className="info-contain">
           <p className="footer__contact-info">
-            Pauline Brettnacher
+            Pauline Schaeffer
             <br />
-            Numéro : +33 1 23 45 67 89
+            Numéro : 06 48 64 86 12
             <br />
             Adresse : 91A Rue nationale, 57910 Hambach
             <br />
-            Adresse mail : PBC@exemple.com
+            Adresse mail : crossfitpbc@gmail.com
             <br />
             Horaires : Lun-Ven 9h-18h
           </p>

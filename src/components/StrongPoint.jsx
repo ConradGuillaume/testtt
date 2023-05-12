@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const StrongPoint = () => {
   return (
@@ -6,10 +7,15 @@ const StrongPoint = () => {
       <p className="title">Nos valeurs</p>
       <article className="open-to-all">
         <div className="contain">
-          <div class="wrapper">
+          <motion.div
+            class="wrapper"
+            initial={{ y: "40vh" }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ y: 0 }}
+          >
             <div class="bg"> Ouvert à tous</div>
             <div class="fg"> Ouvert à tous </div>
-          </div>
+          </motion.div>
           <div className="img-contain">
             <div className="imgdesk"></div>
             <div className="img"></div>
@@ -26,10 +32,15 @@ const StrongPoint = () => {
       </article>
       <article className="Community">
         <div className="contain">
-          <div class="wrapper">
+          <motion.div
+            class="wrapper"
+            initial={{ y: "40vh" }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ y: 0 }}
+          >
             <div class="bg"> Communauté</div>
             <div class="fg"> Communauté </div>
-          </div>
+          </motion.div>
           <div className="img-contain-2">
             <div className="imgdesk3"></div>
             <div className="img-2"></div>
@@ -46,10 +57,15 @@ const StrongPoint = () => {
       </article>
       <article className="coachs">
         <div className="contain">
-          <div class="wrapper">
+          <motion.div
+            class="wrapper"
+            initial={{ y: "40vh" }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ y: 0 }}
+          >
             <div class="bg"> Coaching personalisé</div>
             <div class="fg"> Coaching personalisé </div>
-          </div>
+          </motion.div>
           <div className="img-contain-3">
             <div className="imgdesk5"></div>
             <div className="img-3"></div>

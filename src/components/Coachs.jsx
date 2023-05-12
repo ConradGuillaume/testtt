@@ -14,6 +14,10 @@ const Coachs = forwardRef((props, ref) => {
           <div className="name-contain-p">
             <p className="name-p"> Pauline Schaeffer</p>
           </div>
+          <div className="name-contain-desk-p">
+            {" "}
+            <p className="namedesk"> Pauline Schaeffer</p>
+          </div>
           <div className="coach-contain"></div>
         </div>
         <p className="about">
@@ -34,6 +38,9 @@ const Coachs = forwardRef((props, ref) => {
         <div className="coach">
           <div className="name-contain">
             <p className="name"> Eddie Belakebi</p>
+          </div>
+          <div className="name-contain-desk">
+            <p className="namedesk"> Eddie Belakebi</p>
           </div>
           <div className="coach-contain"></div>
         </div>

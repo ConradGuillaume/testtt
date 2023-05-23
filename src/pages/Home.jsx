@@ -30,7 +30,7 @@ import Coachs from "../components/Coachs";
 import StrongPoint from "../components/StrongPoint";
 import Chat from "../components/Chat";
 import Avis from "../components/Avis";
-
+import BG from "../style/images/background/old3.jpg";
 import Contact from "../components/Contact";
 import Social from "../components/Social";
 import Footer from "../components/Footer";
@@ -88,6 +88,7 @@ const Home = () => {
   return (
     <>
       <div className="home-contain">
+        <img className="BG" src={BG} alt="BG" />
         <div className="main">
           <Header
             ref={homeRef}

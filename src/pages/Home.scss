@@ -19,6 +19,13 @@ $font-3: "font-3", serif;
   height: 100%;
   overflow: hidden;
   position: relative;
+  .BG {
+    position: fixed;
+    height: 100%;
+    @media (min-width: 1000px) {
+      width: 100%;
+    }
+  }
 
   .main {
     position: relative;

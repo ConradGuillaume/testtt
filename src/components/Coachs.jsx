@@ -27,11 +27,9 @@ const Coachs = forwardRef((props, ref) => {
         </p>
         <ul className="licence">
           <li>
-            <img src={altère} alt="altère" />
             <p>BPJEPS AGFF </p>
           </li>
           <li>
-            <img src={altère} alt="altère" />
             <p>CROSSFIT LEVEL 1</p>
           </li>
         </ul>
@@ -51,19 +49,15 @@ const Coachs = forwardRef((props, ref) => {
         </p>
         <ul className="licence">
           <li>
-            <img src={altère} alt="altère" />
             <p>BPJEPS AGFF </p>
           </li>
           <li>
-            <img src={altère} alt="altère" />
             <p>CROSSFIT LEVEL 1 </p>
           </li>
           <li>
-            <img src={altère} alt="altère" />
             <p>CROSSFIT LEVEL 2</p>
           </li>
           <li>
-            <img src={altère} alt="altère" />
             <p>
               CROSSFIT <br /> GYMNASTIQUE
             </p>

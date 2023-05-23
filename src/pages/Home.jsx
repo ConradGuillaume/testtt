@@ -107,7 +107,7 @@ const Home = () => {
           <article>
             <div className="containtitle">
               <img className="crack" src={crack} alt="" />
-              <p className="titleS">votre box crossfit affilié à HAMBACH</p>
+              <p className="titleS">Votre box crossfit affilié à HAMBACH</p>
               <p className="titleXL">
                 Dépassez <span>vos limites</span>
                 <br /> atteignez vos objectifs

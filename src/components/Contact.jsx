@@ -96,6 +96,31 @@ const Contact = forwardRef((props, ref) => {
             />
           </div>
           {errors.email && <span>L'adresse e-mail est obligatoire.</span>}
+          {/* Ajout de la case pour le choix du jour */}
+          <div className="label-contain">
+            <label>Jour :</label>
+            <select {...register("day", { required: true })}>
+              <option value="Lundi">Lundi</option>
+              <option value="Mardi">Mardi</option>
+              <option value="Mercredi">Mercredi</option>
+              <option value="Jeudi">Jeudi</option>
+              <option value="Vendredi">Vendredi</option>
+            </select>
+          </div>
+          {errors.day && <span>Le choix du jour est obligatoire.</span>}
+
+          {/* Ajout de la case pour le choix de l'horaire */}
+          <div className="label-contain">
+            <label>Horaire :</label>
+            <select {...register("time", { required: true })}>
+              <option value="9h">9h</option>
+              <option value="12h15">12h15</option>
+              <option value="17h25">17h25</option>
+              <option value="18h35">18h35</option>
+              <option value="19h45">19h45</option>
+            </select>
+          </div>
+          {errors.time && <span>Le choix de l'horaire est obligatoire.</span>}
           <div className="btn-contain">
             <button type="submit">Envoyer</button>
           </div>

@@ -86,6 +86,11 @@ $color-4: #eec52b;
     margin: 9px 0px;
     align-items: center;
     width: 100%;
+    select {
+      z-index: 2;
+      color: rgb(136, 135, 133);
+      width: 51%;
+    }
     label {
       color: $color-1;
       z-index: 2;
@@ -107,7 +112,8 @@ $color-4: #eec52b;
     }
   }
 
-  input {
+  input,
+  select {
     z-index: 2;
     width: 100%;
     padding: 10px 15px;
